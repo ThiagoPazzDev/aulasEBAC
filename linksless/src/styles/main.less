@@ -1,0 +1,113 @@
+@import "mapas.less";
+
+@breakPointMobile: ~"(max-width: 767px)";
+@breakPointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: #fonts[fontPrincipal];
+}
+
+body {
+    background-color: #colors[corFundo];
+    color: #colors[corTexto];
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakPointMobile {
+        max-width: 70%;
+        background-color: red;
+    }
+
+    @media @breakPointTablet {
+        max-width: 80%;
+        background-color: yellow;
+    }
+}
+
+header {
+    padding: 24px;
+
+    img {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+    }
+
+    .profile-bio {
+        text-align: center;
+
+        h1 {
+            font-size: 30px;
+            .marginBottom8();
+        }
+
+        h2 {
+            font-size: 20px;
+            .marginBottom8();
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 260px;
+    width: 100%;
+    margin: auto;
+
+    img {
+        transition: all ease 0.3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.project-links {
+    margin-top: 32px;
+
+    li{
+        a{
+            text-decoration: none;
+            background-color: #colors[corBotao];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #colors[corTexto];
+            border-radius: 20px;
+            border: 2px solid #colors[corBotao];
+
+            &:hover{
+                transition: all ease .2s;
+                color: #colors[corBotao];
+                background-color: transparent;
+            }
+        }
+
+        
+    }
+}
