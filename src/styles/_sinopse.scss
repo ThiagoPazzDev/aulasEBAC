@@ -1,27 +1,30 @@
-
 .sinopse {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     gap: 40px;
-    margin: 0 auto; 
-    
+    margin: 0 auto;
+
+
     &__content {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap; 
     }
 
-    &__text{
+    &__text {
         text-align: justify;
         font-size: 20px;
         max-width: 100%;
-        width: 500px;
+        width: 100%; 
+        max-width: 500px; 
 
-        @media(max-width: 767px){
+        @media (max-width: 767px) {
             font-size: 15px;
-            width: 200px;
+            width: 100%; 
+            max-width: 200px;
         }
     }
 
@@ -31,10 +34,11 @@
         align-items: center;
 
         img {
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
 
-            @media(max-width: 767px){
-                width: 200px;
+            @media (max-width: 767px) {
+                max-width: 200px;
             }
         }
     }
